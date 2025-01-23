@@ -22,11 +22,11 @@ switch (true) {
         require __DIR__ . '/crud/dashboard/dashboard1.php';
         break;
 
-    case preg_match('/^\/crud\/filter\/get_category/', $request):
+    case preg_match('/^\/crud\/filter/', $request):
         require __DIR__ . '/crud/filter/get_category.php';
         break;
 
-    case preg_match('/^\/crud\/filter\/get_state/', $request):
+    case preg_match('/^\/crud\/filter/', $request):
         require __DIR__ . '/crud/filter/get_state.php';
         break;
 
@@ -34,23 +34,27 @@ switch (true) {
         require __DIR__ . '/crud/profile/profile.php';
         break;
 
-    case preg_match('/^\/crud\/tasks\/create_task/', $request):
+    case preg_match('/^\/crud\/profile/', $request):
+        require __DIR__ . '/crud/profile/changePhoto.php';
+        break;
+
+    case preg_match('/^\/crud\/tasks/', $request):
         require __DIR__ . '/crud/tasks/create_task.php';
         break;
 
-    case preg_match('/^\/crud\/tasks\/delete_task/', $request):
+    case preg_match('/^\/crud\/tasks/', $request):
         require __DIR__ . '/crud/tasks/delete_task.php';
         break;
 
-    case preg_match('/^\/crud\/tasks\/edit_task/', $request):
+    case preg_match('/^\/crud\/tasks/', $request):
         require __DIR__ . '/crud/tasks/edit_task.php';
         break;
 
-    case preg_match('/^\/crud\/tasks\/expire_task/', $request):
+    case preg_match('/^\/crud\/tasks/', $request):
         require __DIR__ . '/crud/tasks/expire_task.php';
         break;
 
-    case preg_match('/^\/crud\/tasks\/specificTask/', $request):
+    case preg_match('/^\/crud\/tasks/', $request):
         require __DIR__ . '/crud/tasks/specificTask.php';
         break;
 
@@ -58,27 +62,25 @@ switch (true) {
         require __DIR__ . '/crud/tasks/tasks.php';
         break;
 
-    case preg_match('/^\/crud\/login/', $request):
+    case preg_match('/^\/crud/', $request):
         require __DIR__ . '/crud/login.php';
         break;
 
-    case preg_match('/^\/crud\/logout/', $request):
+    case preg_match('/^\/crud/', $request):
         require __DIR__ . '/crud/logout.php';
         break;
 
-    case preg_match('/^\/crud\/registration/', $request):
+    case preg_match('/^\/crud/', $request):
         require __DIR__ . '/crud/registration.php';
         break;
 
-    case preg_match('/^\/crud\/check_session/', $request):
+    case preg_match('/^\/crud/', $request):
         require __DIR__ . '/check_session.php';
         break;
 
-        case preg_match('/^\/db_connection/', $request):
-            require __DIR__ . '/db_connection.php';
-            break;
-
-    
+    case preg_match('/^\/crud/', $request):
+        require __DIR__ . '/db_connection.php';
+        break;
 
     default:  // Si la ruta no coincide con ninguna
         http_response_code(404);  // Devuelve un error 404
