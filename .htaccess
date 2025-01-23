@@ -1,0 +1,5 @@
+# Habilitar el módulo de reescritura
+RewriteEngine On
+
+# Reescribir todas las solicitudes a index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
