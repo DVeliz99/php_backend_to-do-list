@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/../../db_connection.php';
+require_once __DIR__ . '/../db_connection.php';
 
 
 // Comprobamos si los parámetros existen en el cuerpo de la solicitud
