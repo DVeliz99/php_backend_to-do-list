@@ -3,9 +3,9 @@
 session_start();
 
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
-header('Content-Type: application/json');
+header('Content-Type: application/json'); //nos aseguramos que la respuesta sea en formato JSON
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 require_once __DIR__ . '/../../db_connection.php';
 
-var_dump($_SERVER['REQUEST_METHOD']); 
+// var_dump($_SERVER['REQUEST_METHOD']); 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    echo "Se recibio una solicitud por POST ";
-    var_dump($_POST);
+    // echo "Se recibio una solicitud por POST ";
+    // var_dump($_POST);
 
 
     $user_id = isset($_POST['user_id']) ? mysqli_real_escape_string($db, $_POST['user_id']) : false;
@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $end_date = isset($_POST['endDate']) ? mysqli_real_escape_string($db, $_POST['endDate']) : false;
 
  
-var_dump($user_id);
-var_dump($task_name);
-var_dump($category);
-var_dump($start_date);
-var_dump($end_date);
+// var_dump($user_id);
+// var_dump($task_name);
+// var_dump($category);
+// var_dump($start_date);
+// var_dump($end_date);
 
     // echo "$user_id";
     // echo "<br>";

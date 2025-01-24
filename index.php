@@ -1,15 +1,16 @@
 <?php
 
 header("Access-Control-Allow-Origin: *"); // Permite solicitudes solo de este origen
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
 
-header('Content-Type: application/json');
+
 
 // Obtener la ruta de la solicitud
 $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
