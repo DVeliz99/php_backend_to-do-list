@@ -17,6 +17,7 @@ require_once __DIR__ . '/../../db_connection.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // echo "Se recibio una solicitud por POST ";
+    var_dump($_POST);
 
 
     $user_id = isset($_POST['user_id']) ? mysqli_real_escape_string($db, $_POST['user_id']) : false;
