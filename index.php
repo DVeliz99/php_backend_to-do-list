@@ -20,9 +20,9 @@ switch (true) {
     case preg_match('/^\/$/', $request):
         echo json_encode(["message" => "Bienvenido al backend"]);
         break;
-        
+
     // Dashboard
-    case preg_match('/^\/backend\/dashboard/', $request):
+    case preg_match('/^\/$\/backend\/dashboard/', $request):
         require __DIR__ . '/crud/dashboard/dashboard1.php';
         break;
 
