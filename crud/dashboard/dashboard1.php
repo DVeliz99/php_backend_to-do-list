@@ -13,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 require_once __DIR__ . '/../../db_connection.php';
 
+var_dump('Hola desde dashboard1.php');
+
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
