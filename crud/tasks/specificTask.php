@@ -54,4 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode(['status' => 'error', 'message' => 'ID de tarea no proporcionado']);
     
     }
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }

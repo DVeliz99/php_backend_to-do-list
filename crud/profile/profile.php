@@ -50,4 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Parámetro user_id inválido.']);
     }
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }

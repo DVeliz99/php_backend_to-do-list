@@ -109,4 +109,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             'message' => 'Error ejecutando la consulta'
         ]);
     }
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }

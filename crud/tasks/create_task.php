@@ -101,4 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['status' => 'error', 'message' => 'Todos los campos son obligatorios.']);
         exit;
     }
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }

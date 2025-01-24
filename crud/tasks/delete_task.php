@@ -32,5 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
         echo json_encode(['status' => 'error', 'message' => 'ID de tarea no proporcionado.']);
     }
     exit;
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }
 ?>

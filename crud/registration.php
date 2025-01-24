@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-require_once __DIR__ . '/../../db_connection.php';
-
+require_once __DIR__ . '/../db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -98,4 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'message' => 'Hubo un error al registrar el usuario.'
         ]);
     }
+}else{
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no permitido.']);
 }
