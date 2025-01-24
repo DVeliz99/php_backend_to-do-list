@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 require_once __DIR__ . '/../../db_connection.php';
 
+var_dump($_SERVER['REQUEST_METHOD']); 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "Se recibio una solicitud por POST ";
