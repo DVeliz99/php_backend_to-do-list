@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-require '/Users/Dario/Desktop/Desarrollador_FULL-STACK/TO-DO-LIST/php_backend/db_connection.php';
-
+require_once __DIR__ . '/../../db_connection.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

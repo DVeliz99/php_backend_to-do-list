@@ -13,7 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 header('Content-Type: application/json');
 
 
-require_once '/Users/Dario/Desktop/Desarrollador_FULL-STACK/TO-DO-LIST/php_backend/db_connection.php';
+require_once __DIR__ . '/../../db_connection.php';
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : 0;
