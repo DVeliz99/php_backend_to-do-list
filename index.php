@@ -50,7 +50,7 @@ switch (true) {
         require __DIR__ . '/crud/tasks/edit_task.php';
         break;
 
-    case preg_match('/^\/backend\/tasks\/expire_task', $request):
+    case preg_match('/^\/backend\/tasks\/expire_task/', $request):
         require __DIR__ . '/crud/tasks/expire_tasks.php';
         break;
 
