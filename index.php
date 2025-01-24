@@ -84,7 +84,7 @@ switch (true) {
 
         // Session Check
     case preg_match('/^\/backend\/check_session/', $request):
-        require __DIR__ . '/check_session.php';
+        require __DIR__ . '/crud/check_session.php';
         break;
 
         // Database Connection
