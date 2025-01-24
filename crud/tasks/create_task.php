@@ -27,7 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $end_date = isset($_POST['endDate']) ? mysqli_real_escape_string($db, $_POST['endDate']) : false;
 
  
-
+var_dump($user_id);
+var_dump($task_name);
+var_dump($category);
+var_dump($start_date);
+var_dump($end_date);
 
     // echo "$user_id";
     // echo "<br>";
