@@ -40,7 +40,7 @@ $user = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASSWORD'];
 $dbname = $_ENV['DB_NAME'];
 
-var_dump($host, $user, $password, $dbname);
+// var_dump($host, $user, $password, $dbname);
 
 
 
@@ -48,7 +48,7 @@ $db = new mysqli($host, $user, $password, $dbname);
 if ($db->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }else{
-    var_dump('Connection successful');
+    // var_dump('Connection successful');
 }
 ?>
 
