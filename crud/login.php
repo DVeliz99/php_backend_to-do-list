@@ -17,7 +17,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 session_start(); // Inicia la sesión
 
-header("Access-Control-Allow-Origin: http://localhost:4200"); // Permite solicitudes desde tu aplicación Angular
+header("Access-Control-Allow-Origin: *"); // Permite solicitudes desde tu aplicación Angular
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
