@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
 
-            $uploadDir = __DIR__ . '/../uploads/'; // ../ subir de nivel para acceder a la carpeta uploads
+            $uploadDir = __DIR__ . '/../../uploads/'; // ../ subir de nivel para acceder a la carpeta uploads
             $newavatarName = basename($newAvatar['name']); // Sanear el nombre del archivo
             $uploadFile = $uploadDir . $newavatarName; // Ruta completa del archivo
 
