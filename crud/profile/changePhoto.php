@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row_avatar = mysqli_fetch_assoc($result_avatarPath);
             $avatar = $row_avatar['avatar'];
 
-            $pathtoDelete = __DIR__ . '/../' . $avatar; // Asegúrate de que la ruta completa sea correcta
+            $pathtoDelete = __DIR__ . '/../../' . $avatar; // Asegúrate de que la ruta completa sea correcta
 
             if (file_exists($pathtoDelete)) {
                 if (unlink($pathtoDelete)) {
