@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $image = $_FILES['image'];
-        $uploadDir = __DIR__ . '/../uploads/'; // ../ sube un nivel y accede a la carpeta uploads
+        $uploadDir = __DIR__ . '/uploads/'; // ../ sube un nivel y accede a la carpeta uploads
         $imageName = basename($image['name']); // Sanear el nombre del archivo
         $uploadFile = $uploadDir . $imageName; // Ruta completa del archivo
 
